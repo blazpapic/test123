@@ -1,0 +1,16 @@
+; BIND data file for local loopback interface
+;
+$TTL    3000
+@       IN      SOA     naloga-blaz-papic-2018-10-24.test.3fs.si. admin.test.3fs.si (
+                              5         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; Name servers
+@       300     IN      NS      naloga-blaz-papic-2018-10-24.test.3fs.si.
+
+; A records for name servers
+naloga-blaz-papic-2018-10-24.test.3fs.si.	300             IN      A       146.185.136.111
+www	300	IN	CNAME	test.3fs.si
+
